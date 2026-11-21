@@ -23,3 +23,7 @@ server/receipts/*
 # OS Files
 .DS_Store
 Thumbs.db
+
+# IDE Workflow & Scratch Docs
+WORKFLOW.md
+.agent/
