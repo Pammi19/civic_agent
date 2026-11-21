@@ -26,7 +26,7 @@ services:
         fromService:
           type: web
           name: civicpulse-frontend
-          property: host
+          property: url
       - key: GEMINI_API_KEY
         sync: false
       - key: MONGO_URI
@@ -52,4 +52,4 @@ services:
         fromService:
           type: web
           name: civicpulse-backend
-          property: host
+          property: url
