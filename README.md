@@ -101,17 +101,6 @@ node server/test-e2e.js
 ```
 
 ---
-
-## ⏱️ 3-Minute Hackathon Demo Script for Judges
-
-| Timing | Screen | Spoken Pitch & Demonstration Action |
-| :--- | :--- | :--- |
-| **0:00 – 0:35** | **Citizen Dashboard (`/`)** | *"Judges, millions of eligible citizens miss out on government welfare schemes because e-governance portals are complex, jargon-heavy, and unforgiving. Meet CivicPulse — an autonomous public service agent that bridges this bureaucratic divide."*<br>👉 Show multilingual voice mic: speak *"Mera scholarship form bhar do"* or click the quick prompt preset. |
-| **0:35 – 1:10** | **Document & Eligibility** | *"A student uploads their income certificate or clicks our one-click sample certificate loader. Watch how our multimodal extractor immediately structures their legal identity, Aadhaar number, and bank credentials. Concurrently, our rule engine evaluates whether their family income meets the threshold, giving a plain-language explanation in both English and Hindi."* |
-| **1:10 – 2:05** | **Live Playwright Execution** | *"Now we click 'Launch Autonomous Playwright Agent'. Notice that we don't mock the automation: a real, visible Chromium browser opens on screen with slow-motion typing. The AI fills personal details, handles cascading state and district dropdowns, declares scheme benefits, and attaches the income certificate."* |
-| **2:05 – 2:35** | **Human-in-the-Loop Checkpoint** | *"Notice that the agent does NOT recklessly submit. It stops right before the final button. On our dashboard, a security approval modal alerts the citizen with a summary of the extracted data. Only when the citizen reviews and enters their e-Sign OTP (123456) does the agent execute the final submission."* |
-| **2:35 – 3:00** | **Receipt & Audit Trail Vault** | *"The portal generates an official Application Tracking ID (`GOV-2026-XXXXX`). Our agent captures a full-page receipt screenshot and commits it to the persistent Audit Vault. Bureaucracy executed in 60 seconds without errors."* |
-
 ---
 
 ## 🛡️ Key Safety & Reliability Features
