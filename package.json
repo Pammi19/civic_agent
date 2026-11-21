@@ -1,0 +1,27 @@
+{
+  "name": "civicpulse-autonomous-agent",
+  "version": "1.0.0",
+  "description": "Autonomous Public Service & Bureaucracy Execution Agent (Track 1 - Civic Pulse)",
+  "type": "module",
+  "scripts": {
+    "server": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server install && npx --prefix server playwright install chromium",
+    "build:all": "npm --prefix client run build && npm --prefix server install && npx --prefix server playwright install chromium",
+    "test:e2e": "node server/test-e2e.js",
+    "start": "node server/server.js"
+  },
+  "keywords": [
+    "hackathon",
+    "civic-pulse",
+    "playwright",
+    "ai-agent",
+    "mern",
+    "e-governance",
+    "human-in-the-loop"
+  ],
+  "author": "CivicPulse Team",
+  "license": "MIT"
+}

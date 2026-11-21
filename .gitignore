@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Secrets & Environment Files (Never push server/.env)
+.env
+server/.env
+client/.env
+
+# Production Build Output
+client/dist/
+dist/
+
+# Logs & Temporary Uploads
+*.log
+server/debug.log
+server/uploads/*
+!server/uploads/.gitkeep
+server/receipts/*
+!server/receipts/.gitkeep
+
+# OS Files
+.DS_Store
+Thumbs.db
