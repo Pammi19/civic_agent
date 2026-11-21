@@ -1,8 +1,3 @@
-# ==============================================================================
-# Render Blueprint Specification for CivicPulse AI (Track 1 - Civic Pulse)
-# Autonomous Public Service & Bureaucracy Execution Agent
-# ==============================================================================
-
 services:
   - type: web
     name: civicpulse-backend
@@ -10,13 +5,15 @@ services:
     plan: free
     region: oregon
     rootDir: server
-    buildCommand: npm install && npx playwright install chromium
+    buildCommand: PLAYWRIGHT_BROWSERS_PATH=0 npm install && PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install chromium
     startCommand: node server.js
     envVars:
       - key: NODE_ENV
         value: production
       - key: HEADLESS
         value: "true"
+      - key: PLAYWRIGHT_BROWSERS_PATH
+        value: "0"
       - key: PORT
         value: "5000"
       - key: FRONTEND_URL
@@ -38,4 +35,4 @@ services:
         destination: /index.html
     envVars:
       - key: VITE_API_URL
-        value: https://civicpulse-backend.onrender.com
+        value: https://civicpulse-backend-xk59.onrender.com
