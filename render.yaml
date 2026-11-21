@@ -4,10 +4,6 @@
 # ==============================================================================
 
 services:
-  # ----------------------------------------------------------------------------
-  # 1. CivicPulse Express Backend & Playwright Agent Engine
-  # ----------------------------------------------------------------------------
-
   - type: web
     name: civicpulse-backend
     runtime: node
@@ -24,24 +20,16 @@ services:
       - key: PORT
         value: "5000"
       - key: FRONTEND_URL
-        fromService:
-          type: web
-          name: civicpulse-frontend
-          property: url
+        value: https://civicpulse-frontend.onrender.com
       - key: GEMINI_API_KEY
         sync: false
       - key: MONGO_URI
         sync: false
-        
- # ----------------------------------------------------------------------------
- # 2. CivicPulse React + Vite Citizen Command Dashboard (Static Site)
- # ----------------------------------------------------------------------------
 
   - type: web
     name: civicpulse-frontend
     runtime: static
     plan: free
-    region: oregon
     rootDir: client
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
@@ -51,7 +39,4 @@ services:
         destination: /index.html
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: civicpulse-backend
-          property: url          
+        value: https://civicpulse-backend.onrender.com
